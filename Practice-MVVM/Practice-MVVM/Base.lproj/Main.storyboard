@@ -27,9 +27,6 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3R-68-sy7">
                                 <rect key="frame" x="304" y="64" width="100" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="Hem-2N-bXD"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Add Item"/>
                                 <connections>
@@ -45,6 +42,7 @@
                             <constraint firstItem="X3R-68-sy7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="9n0-vN-EbB"/>
                             <constraint firstItem="Boo-rQ-5UR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="Iv6-db-hiO"/>
                             <constraint firstItem="Boo-rQ-5UR" firstAttribute="top" secondItem="RYa-Cy-Ve7" secondAttribute="bottom" constant="20" id="KkA-yb-rDm"/>
+                            <constraint firstItem="X3R-68-sy7" firstAttribute="width" secondItem="RYa-Cy-Ve7" secondAttribute="width" multiplier="0.364964" id="QJZ-CW-ehK"/>
                             <constraint firstItem="Boo-rQ-5UR" firstAttribute="top" secondItem="X3R-68-sy7" secondAttribute="bottom" constant="20" id="WoU-kZ-zh0"/>
                             <constraint firstItem="Boo-rQ-5UR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="X5O-1a-z35"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Boo-rQ-5UR" secondAttribute="bottom" id="d90-w1-6qT"/>

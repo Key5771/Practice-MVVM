@@ -46,6 +46,7 @@ extension ListViewController: UITableViewDataSource {
         }
         
         cell.setupDataFromModel(model: viewModel.items[indexPath.row])
+        self.itemTableView.tableFooterView = UIView()
         
         return cell
     }
