@@ -7,6 +7,10 @@
 
 import Foundation
 
+protocol ViewModelDelegate {
+    func onItemAddClick(newItem: String)
+}
+
 class ViewModel {
     
     var items: [Model] = []
@@ -19,4 +23,10 @@ class ViewModel {
         print("itemCount: \(items.count)")
     }
     
+}
+
+extension ViewModel: ViewModelDelegate {
+    func onItemAddClick(newItem: String) {
+        print("newItem: \(newItem)")
+    }
 }

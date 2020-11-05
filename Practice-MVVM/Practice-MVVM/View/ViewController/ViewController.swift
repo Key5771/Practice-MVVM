@@ -24,7 +24,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func addItemAction(_ sender: Any) {
-        
+        guard let viewModel = self.viewModel, let text = self.itemTextField.text else { return }
+        viewModel.onItemAddClick(newItem: text)
     }
     
 }
