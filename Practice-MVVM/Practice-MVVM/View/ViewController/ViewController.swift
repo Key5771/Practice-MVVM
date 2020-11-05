@@ -54,6 +54,9 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: ReloadTableViewDelegate {
     func reloadTableView(index: Int) {
         // Add reload Logic
-        
+        itemTextField.text = ""
+        itemTableView.beginUpdates()
+        itemTableView.insertRows(at: [IndexPath(row: index, section: 0)], with: .fade)
+        itemTableView.endUpdates()
     }
 }
