@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+class ViewModel {
+    
+    var items: [Model] = []
+    var itemJSON = [["itemIndex" : "1", "itemName" : "Washing Car"],
+                    ["itemIndex" : "2", "itemName" : "Book Movie Ticket"],
+                    ["itemIndex" : "3", "itemName" : "Attend Wedding Ceremony"]]
+    
+    init() {
+        self.items = Model.modelFromDictionaryArray(array: itemJSON as NSArray)
+    }
+    
+}
