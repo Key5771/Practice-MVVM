@@ -40,6 +40,12 @@ extension ViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
+        guard let viewModel = self.viewModel else {
+            fatalError("ViewModel is nil")
+        }
+        
+        cell.setupDataFromModel(model: viewModel.items[indexPath.row])
+        
         return cell
     }
 }

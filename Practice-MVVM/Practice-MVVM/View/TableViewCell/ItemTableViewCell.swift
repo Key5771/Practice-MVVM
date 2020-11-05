@@ -8,7 +8,9 @@
 import UIKit
 
 class ItemTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var itemIndexLabel: UILabel!
+    @IBOutlet weak var itemNameLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,4 +22,8 @@ class ItemTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func setupDataFromModel(model: Model) {
+        self.itemNameLabel.text = model.itemName
+        self.itemIndexLabel.text = model.itemIndex
+    }
 }
