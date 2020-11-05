@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel = ViewModel()
+        viewModel = ViewModel(viewDelegate: self)
         
         let nib = UINib(nibName: "ItemTableViewCell", bundle: nil)
         itemTableView.register(nib, forCellReuseIdentifier: "itemCell")
@@ -51,3 +51,9 @@ extension ViewController: UITableViewDataSource {
     }
 }
 
+extension ViewController: ReloadTableViewDelegate {
+    func reloadTableView(index: Int) {
+        // Add reload Logic
+        
+    }
+}
