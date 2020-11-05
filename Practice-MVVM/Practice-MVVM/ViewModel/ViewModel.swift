@@ -16,6 +16,7 @@ class ViewModel {
     
     init() {
         self.items = Model.modelFromDictionaryArray(array: itemJSON as NSArray)
+        print("itemCount: \(items.count)")
     }
     
 }
