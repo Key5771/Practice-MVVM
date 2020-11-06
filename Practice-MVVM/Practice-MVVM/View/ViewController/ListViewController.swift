@@ -21,6 +21,7 @@ class ListViewController: UIViewController {
         let nib = UINib(nibName: "ItemTableViewCell", bundle: nil)
         itemTableView.register(nib, forCellReuseIdentifier: "itemCell")
         itemTableView.dataSource = self
+        itemTableView.delegate = self
     }
 
     @IBAction func addItemAction(_ sender: Any) {
@@ -49,6 +50,12 @@ extension ListViewController: UITableViewDataSource {
         self.itemTableView.tableFooterView = UIView()
         
         return cell
+    }
+}
+
+extension ListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.itemTableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
